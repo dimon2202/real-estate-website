@@ -2,7 +2,12 @@ import { Server } from "socket.io"
 
 const io = new Server({
   cors: {
-    origin: "https://real-estate-website-client-rob5.onrender.com",
+    origin: [
+      "http://localhost:5173",
+      "https://real-estate-website-client-rob5.onrender.com",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
   },
 })
 
